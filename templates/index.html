@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website-name</title>
+</head>
+
+<body>
+
+<h1> {{ website_title }} </h1>
+
+<h2>Index of /data/aia/synoptic{{ current_directory }}</h2>
+
+<ul>
+    {% if parent_link %}
+        <li><a href="{{ parent_link }}">⬆ ../</a></li>
+    {% endif %}
+
+    {% for name, path, is_dir in entries %}
+        <li> 
+        {% if is_dir %}
+            <a href="{{ path }}/">📂 {{ name }}/</a>
+        {% else %}
+            <a href="{{ path }}">📄 {{ name }}</a>
+        {% endif %}
+        </li>
+    {% endfor %}
+</ul>
+
+</body>
+
+</html>
