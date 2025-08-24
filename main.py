@@ -4,7 +4,7 @@ import os
 app = Flask(__name__)
 
 
-BASE_DATA_DIR = "/home/alex/Downloads/"
+BASE_DATA_DIR = "C:/Users/alexa/AIA Data/mostrecent"
 
 
 def safe_join(base, *paths):
